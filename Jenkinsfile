@@ -1,14 +1,13 @@
 pipeline {
     agent any
     tools {
-        maven 'MAVEN3''  // This should match your Maven name in Jenkins Global Tool Configuration
-        jdk 'JDK17'     // This should match your JDK name in Jenkins Global Tool Configuration
+        maven 'MAVEN3'
+        jdk 'JDK17'
     }
     stages {
         stage('Checkout') {
             steps {
                 git branch: 'main', url: 'https://github.com/VARSHABHASKARAN/java-ci-demo.git'
-
             }
         }
         stage('Build') {
