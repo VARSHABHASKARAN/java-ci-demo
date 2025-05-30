@@ -7,7 +7,8 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/VARSHABHASKARAN/vish.git'
+                git branch: 'main', url: 'https://github.com/VARSHABHASKARAN/java-ci-demo.git'
+
             }
         }
         stage('Build') {
