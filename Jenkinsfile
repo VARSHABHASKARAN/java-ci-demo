@@ -2,9 +2,8 @@ pipeline {
     agent any
 
     tools {
-        // Make sure Maven and JDK are installed and configured in Jenkins global tools
-        maven 'Maven'  // The name configured in Jenkins for Maven
-        jdk 'JDK'      // The name configured in Jenkins for JDK
+        maven 'MAVEN3'   // Replace with your exact Maven tool name
+        jdk 'JDK17'      // Replace with your exact JDK tool name
     }
 
     stages {
@@ -16,7 +15,6 @@ pipeline {
 
         stage('Build') {
             steps {
-                // Use Windows batch command instead of sh
                 bat 'mvn clean compile'
             }
         }
